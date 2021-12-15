@@ -32,9 +32,9 @@ public class HexCell : MonoBehaviour
         
     }
 
-    public void CreateVillage(Player player)
+    public void CreateVillage(Player player, GameObject topBar)
     {
-        village = new Village(this, player);
+        village = new Village(this, player,topBar);
         Debug.Log("New village at : " + coordinates.ToString() );
         spriteRenderer.color = Color.blue;
     }

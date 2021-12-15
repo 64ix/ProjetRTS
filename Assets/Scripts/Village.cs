@@ -15,7 +15,7 @@ public class Village
     Text[] texts;
     public bool isActive = false;
 
-    public Village(HexCell hexCell, Player player)
+    public Village(HexCell hexCell, Player player, GameObject topBar)
     {
 
         Ressources = new int[3] { 2000, 2000, 2000 };
@@ -27,7 +27,7 @@ public class Village
         owner = player;
         GameManager.Instance.allVillages.Add(this);
         player.villages.Add(this);
-        villageInfos = GameObject.Find("Top Bar");
+        villageInfos = topBar;
         texts = villageInfos.transform.GetComponentsInChildren<Text>(true);
     }
 

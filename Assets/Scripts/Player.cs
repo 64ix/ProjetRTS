@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public List<Village> villages = new List<Village>();
     public Village activeVillage;
-    public string name;
+    public string Name;
 
     void Start()
     {

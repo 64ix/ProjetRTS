@@ -19,6 +19,7 @@ public class Controller : MonoBehaviour
     public BuildingUI buildingPrefab;
     public GameObject leftPanel;
     public Village activeVillage;
+    public GameObject topBar;
 
     private bool drag = false;
 
@@ -49,7 +50,7 @@ public class Controller : MonoBehaviour
                 if (Input.GetKey(KeyCode.LeftControl))
                 {
                     if (!touched.isVillage)
-                        touched.CreateVillage(mainPlayer);
+                        touched.CreateVillage(mainPlayer,topBar);
                 }
                 else
                 {
